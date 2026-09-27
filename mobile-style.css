@@ -1,0 +1,53 @@
+/* ==========================================
+   STYLE KHUSUS TAMPILAN HP (MOBILE OPTIMIZED)
+   ========================================== */
+@media (max-width: 768px) {
+
+  /* 1. Merapikan Header Bar */
+  header, .header-container, div[class*="header"] {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 14px !important;
+  }
+
+  /* Mengecilkan judul agar tidak pecah/turun baris */
+  header h1, header h2, .header-title, div[class*="title"] {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+
+  /* Merapikan tombol Refresh Data */
+  button, .btn-refresh, button[class*="refresh"] {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 2. Merapikan Kartu Container Grafik */
+  .card, .dashboard-card, div[class*="card"] {
+    padding: 12px !important;
+    margin-bottom: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  /* Mengecilkan judul grafik */
+  .card h2, .card h3, div[class*="card"] h3 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* 3. Trik Scroll Horizontal Grafik (Grafik tidak lagi berdesakan) */
+  .chart-container, canvas, div[class*="chart"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Memaksa area grafik memiliki lebar minimal agar label tanggal terbaca lurus */
+  .chart-container > div, canvas {
+    min-width: 550px !important;
+  }
+}
